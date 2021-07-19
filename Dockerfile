@@ -24,10 +24,7 @@ RUN    apk update \
 	&& curl -L --silent ${JMETER_DOWNLOAD_URL} >  /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz  \
 	&& mkdir -p /opt  \
 	&& tar -xzf /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz -C /opt  \
-	&& rm -rf /tmp/dependencies \
-	&& mkdir scripts \
-	&& mkdir ./scripts/tests \
-	&& mkdir ./scripts/tests/trivial
+	&& rm -rf /tmp/dependencies 
 
 # TODO: plugins (later)
 # && unzip -oq "/tmp/dependencies/JMeterPlugins-*.zip" -d $JMETER_HOME
@@ -36,9 +33,7 @@ RUN    apk update \
 ENV PATH $PATH:$JMETER_BIN
 
 # Entrypoint has same signature as "jmeter" command
-COPY entrypoint.sh ./scripts \
-	&& test.sh ./scripts \
-	&& ./tests/trivial/test-plan.jmx ./scripts/tests/trivial
+COPY entrypoint.sh /
 
 WORKDIR	${JMETER_HOME}
 
