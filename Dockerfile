@@ -24,7 +24,10 @@ RUN    apk update \
 	&& curl -L --silent ${JMETER_DOWNLOAD_URL} >  /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz  \
 	&& mkdir -p /opt  \
 	&& tar -xzf /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz -C /opt  \
-	&& rm -rf /tmp/dependencies
+	&& rm -rf /tmp/dependencies \
+	&& mkdir scripts \
+	&& mkdir ./scripts/tests \
+	&& mkdir ./scripts/tests/trivial
 
 # TODO: plugins (later)
 # && unzip -oq "/tmp/dependencies/JMeterPlugins-*.zip" -d $JMETER_HOME
