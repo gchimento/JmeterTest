@@ -35,8 +35,7 @@ ENV PATH $PATH:$JMETER_BIN
 # Entrypoint has same signature as "jmeter" command
 COPY entrypoint.sh /
 
-COPY 	tests ${JMETER_HOME}/tests/trivial \
-	&& test.sh ${JMETER_HOME} 
+COPY test.sh ${JMETER_HOME} 
 
 RUN chmod +x entrypoint.sh
 
