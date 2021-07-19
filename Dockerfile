@@ -36,7 +36,5 @@ ENV PATH $PATH:$JMETER_BIN
 
 COPY test.sh ${JMETER_HOME} 
 
-RUN chmod +x entrypoint.sh
-
 WORKDIR	${JMETER_HOME}
 
