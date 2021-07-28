@@ -5,5 +5,5 @@ PER95=$2
 echo "reporting: 
 - module: passfail 
   criteria: 
-  - avg-rt>"$RT_AVG"ms, continue as failed 
-  - p95>"$PER95"ms, continue as failed">passfail.yaml
+    Se supero el tiempo de respuesta promedio maximo: avg-rt>"$RT_AVG"ms, continue as failed 
+    Se supero el tiempo maximo del 95 percentil: p95>"$PER95"ms, continue as failed">passfail.yaml
