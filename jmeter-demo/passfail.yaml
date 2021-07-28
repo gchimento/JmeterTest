@@ -1,0 +1,7 @@
+reporting: 
+- module: passfail 
+  criteria: 
+    Se supero el tiempo de respuesta promedio maximo (500ms): avg-rt of UpdateUser>500ms, continue as failed 
+    Se supero el tiempo maximo del 95 percentil (1000ms): p95 of UpdateUser>1000ms, continue as failed
+    No se llego a la cantidad especificada de requests (200): hits of UpdateUser<200, continue as failed    
+    Se supero el procentaje maximo de errores (0%): fail>0%, continue as failed
