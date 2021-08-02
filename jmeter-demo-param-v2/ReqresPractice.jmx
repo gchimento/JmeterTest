@@ -33,13 +33,20 @@
               <stringProp name="Argument.value">${__P(TESTING_URL)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="Username" elementType="Argument">
-              <stringProp name="Argument.name">Username</stringProp>
-              <stringProp name="Argument.value">morpheus</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
           </collectionProp>
         </Arguments>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="filename">/Users/matiassancheznegrette/Documents/GitHub/JmeterTest/jmeter-demo-param-v2/Usernames.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="variableNames">Username</stringProp>
+        </CSVDataSet>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetUserList" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -255,7 +262,7 @@
           </AuthManager>
           <hashTree/>
         </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
             <name>saveConfig</name>
@@ -330,8 +337,6 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ConfigTestElement guiclass="PropertyControlGui" testclass="ConfigTestElement" testname="Property Display" enabled="true"/>
-      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
