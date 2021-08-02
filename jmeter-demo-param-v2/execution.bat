@@ -19,5 +19,5 @@
 	@echo   %JMX%: >>execution.yaml
 	@echo     script: %cd%\%JMX%.jmx>>execution.yaml
 	@echo     data-sources:>>execution.yaml
-	@echo     - %cd%\%DATA%.csv>>execution.yaml
+	@echo     - path: %cd%\%DATA%.csv>>execution.yaml
 )
