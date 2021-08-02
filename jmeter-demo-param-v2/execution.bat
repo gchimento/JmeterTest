@@ -8,7 +8,7 @@
 	@echo   throughput: {}>>execution.yaml
 	@echo scenarios: >>execution.yaml
 	@echo   %JMX%: >>execution.yaml
-	@echo     script: %JMX%.jmx>>execution.yaml
+	@echo     script: %cd%\%JMX%.jmx>>execution.yaml
 ) else (
 	@echo execution: >execution.yaml
 	@echo - concurrency: {} >>execution.yaml
@@ -17,7 +17,7 @@
 	@echo   throughput: {}>>execution.yaml
 	@echo scenarios: >>execution.yaml
 	@echo   %JMX%: >>execution.yaml
-	@echo     script: %JMX%.jmx>>execution.yaml
+	@echo     script: %cd%\%JMX%.jmx>>execution.yaml
 	@echo     data-sources:>>execution.yaml
-	@echo     - %DATA%.csv>>execution.yaml
+	@echo     - %cd%\%DATA%.csv>>execution.yaml
 )
