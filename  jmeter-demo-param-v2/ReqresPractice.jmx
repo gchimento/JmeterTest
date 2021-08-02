@@ -30,7 +30,7 @@
           <collectionProp name="Arguments.arguments">
             <elementProp name="BASE_URL" elementType="Argument">
               <stringProp name="Argument.name">BASE_URL</stringProp>
-              <stringProp name="Argument.value">reqres.in</stringProp>
+              <stringProp name="Argument.value">${__P(TESTING_URL)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="Username" elementType="Argument">
@@ -330,6 +330,8 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
+      <ConfigTestElement guiclass="PropertyControlGui" testclass="ConfigTestElement" testname="Property Display" enabled="true"/>
+      <hashTree/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
