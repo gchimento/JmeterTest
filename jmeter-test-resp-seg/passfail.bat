@@ -26,4 +26,4 @@
 @echo services: >>passfail.yaml
 @echo - module: shellexec >>passfail.yaml
 @echo   post-process: >>passfail.yaml
-@echo   - %JMETER-HOME%\bin\jmeter.bat -Jjmeter.save.saveservice.assertion_results_failure_message=false -g "${TAURUS_ARTIFACTS_DIR}\kpi.jtl" -o "${TAURUS_ARTIFACTS_DIR}\dashboard" >>passfail.yaml
+@echo   - %JMETER-HOME%\bin\jmeter.bat -Jjmeter.save.saveservice.assertion_results_failure_message=false -Jjmeter.reportgenerator.overall_granularity=15000 -g "${TAURUS_ARTIFACTS_DIR}\kpi.jtl" -o "${TAURUS_ARTIFACTS_DIR}\dashboard" >>passfail.yaml
