@@ -23,3 +23,7 @@
 	echo Se setea el porcentaje maximo de error en %PERERR%%% para el Total
 	@echo     Se supero el procentaje maximo de errores (%PERERR%%%^): fail^>%PERERR%%%, continue as failed >>passfail.yaml
 )
+@echo servicies: >>passfail.yaml
+@echo - module: shellexec >>passfail.yaml
+@echo 	post-process: >>passfail.yaml
+@echo 	- %JMETER-HOME%\bin\jmeter.bat -Jjmeter.save.saveservice.assertion_results_failure_message=false -g %TAURUS_ARTIFACTS_DIR%\kpi.jtl -o %TAURUS_ARTIFACTS_DIR%\dashboard >>passfail.yaml
